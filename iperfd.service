@@ -1,0 +1,14 @@
+[Unit]
+Description=iperf
+After=network.target
+
+[Service]
+User=root
+Group=root
+ExecStart=/usr/bin/iperf -s -D -p 4711
+
+[Install]
+WantedBy=multi-user.target
+
+
+
